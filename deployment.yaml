@@ -37,15 +37,6 @@ spec:
         - name: grpc
           containerPort: 9999
           protocol: TCP
-        command:
-        - ./echoserver
-        - --port=9898
-        - --port-metrics=9797
-        - --grpc-port=9999
-        - --grpc-service-name=echoserver
-        - --level=info
-        - --random-delay=false
-        - --random-error=false
         env:
         - name: echoserver_UI_COLOR
           value: "#34577c"
