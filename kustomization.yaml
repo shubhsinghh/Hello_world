@@ -1,4 +1,3 @@
-
 namespace: echoserver
 resources:
   - hpa.yaml
