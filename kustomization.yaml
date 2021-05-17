@@ -1,4 +1,1 @@
-namespace: echoserver2
-resources:
-  - hpa.yaml
-  - deployment.yaml
+
