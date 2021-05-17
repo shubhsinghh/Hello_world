@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: echoserverd
-        image: cilium/echoserver:1.10.1
+        image: gcrxio/k8s.gcr.io_echoserver:1.7
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
