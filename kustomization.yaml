@@ -1,4 +1,4 @@
-namespace: helloworldns
+namespace: helloworldns1
 resources:
   - hpa.yaml
   - deployment.yaml
