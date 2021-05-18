@@ -41,19 +41,21 @@ spec:
         - name: helloworld_UI_COLOR
           value: "#34577c"
         livenessProbe:
-          exec:
-            command:
-            - http
-            - localhost:5050/health
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
+        httpGet:
+            path: /
+            port: 5050
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 1
         readinessProbe:
-          exec:
-            command:
-            - http
-            - localhost:5050/readyz
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
+        httpGet:
+            path: /
+            port: 5050
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 1
         resources:
           limits:
             cpu: 2000m
