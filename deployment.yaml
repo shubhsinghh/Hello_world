@@ -46,7 +46,7 @@ spec:
             - podcli
             - check
             - http
-            - localhost:5050
+            - localhost:9898/healthz
           initialDelaySeconds: 5
           timeoutSeconds: 5
         readinessProbe:
@@ -55,7 +55,7 @@ spec:
             - podcli
             - check
             - http
-            - localhost:5050
+            - localhost:9898/readyz
           initialDelaySeconds: 5
           timeoutSeconds: 5
         resources:
@@ -65,4 +65,3 @@ spec:
           requests:
             cpu: 100m
             memory: 64Mi
-
